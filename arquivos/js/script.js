@@ -1,9 +1,10 @@
 
 $(window).on('load', function(){
-    var cep, itemScroll, targetOffSet;
+    var cep, itemScroll, targetOffSet,
+        inputCep = $('input[name="cep"]');
 
-    $('input[name="cep"]').focus();
-    $('input[name="cep"]').mask('00000-000');
+    $(inputCep).focus();
+    $(inputCep).mask('00000-000');
     scrollDelay();
 
     $('#form-cep button').on('click', function(event){
@@ -13,7 +14,7 @@ $(window).on('load', function(){
 
     function getInformationAddress(){
 
-        cep = $('input[name="cep"]').val().replace('-','');
+        cep = $(inputCep).val().replace('-','');
         validateCep(cep);
 
         $.ajax({
@@ -29,11 +30,11 @@ $(window).on('load', function(){
     function validateCep(cep){
         
         if(cep.length == 8){
-            $('input[name="cep"]').removeClass('invalid')
-            $('input[name="cep"]').attr("placeholder", "Digite seu cep")
+            $(inputCep).removeClass('invalid')
+            $(inputCep).attr("placeholder", "Digite seu cep")
         }else{
-            $('input[name="cep"]').addClass('invalid')
-            $('input[name="cep"]').val("").attr("placeholder", "Cep inválido! Digite novamente.")           
+            $(inputCep).addClass('invalid')
+            $(inputCep).val("").attr("placeholder", "Cep inválido! Digite novamente.")           
         }
     }
 
