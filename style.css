@@ -1,0 +1,304 @@
+/* reset */
+
+*{padding:0px;margin:0px;box-sizing: border-box;}
+.container{max-width: 1200px; margin: 0 auto;}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 27px; 
+}
+
+header{
+    background-color: #e4e4e4;
+    height: 70px;
+}
+
+header h1 a{
+    color: #057393;
+    font-weight: bold;
+    font-size: 37px;
+    text-decoration: none;
+}
+
+header h1 a span{
+    color: #08566d;
+}
+
+.type-your-cep{
+    background-image: url('/_img/banner-main.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align:center;
+    height: 90vh;
+}
+
+.type-your-cep h2{
+    padding-top: 125px;
+    padding-bottom: 60px;
+    font-size: 40px;
+}
+
+.type-your-cep form{
+    width: 1050px;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+    margin: 0 auto 60px auto;
+}
+
+.type-your-cep form input, .type-your-cep form button{
+    height: 75px;
+    border:none;
+}
+
+.type-your-cep form input{
+    width: 85%;
+    background: #fff;
+    font-size: 27px;
+    padding-left: 25px;
+    color: #898989;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+}
+
+
+.type-your-cep form input.invalid::placeholder{
+    color:  red;
+}
+
+.type-your-cep form button{
+    width: 15%;
+    background-color: #057393;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.type-your-cep form button:hover{
+    opacity: 0.8;
+}
+
+.type-your-cep form button:before{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='47.34' height='47.344'%3E%3Cpath d='M19.5 2A17.5 17.5 0 112 19.5 17.5 17.5 0 0119.5 2zm11.15 29.354l.7-.708 14 14-.7.707z' fill='none' stroke='%23fff' stroke-width='4'/%3E%3C/svg%3E");
+    background-size: cover;
+}
+
+.type-your-cep p{
+    padding-bottom: 30px;
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.type-your-cep p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 300ms;
+}
+
+.type-your-cep p a:hover{
+    opacity: .6;
+}
+
+.type-your-cep p.active{
+    opacity: 1;
+}
+
+.type-your-cep p a:after{
+   content: '';
+   display: block;
+   width: 25px;
+   height: 25px;
+   border-right: 1px solid #fff;
+   border-bottom: 1px solid #fff;
+   background: transparent;
+   margin: 20px auto 0;
+   transform: rotate(45deg);
+}
+
+.information-about-cep{
+    padding-top: 60px;
+    padding-bottom: 235px;
+    color: #666666;
+    display: none;
+}
+
+.information-about-cep.active{
+    display: block
+}
+
+.information-about-cep div{
+    width: 1040px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.information-about-cep .img{
+   max-width: 190px;
+   height: auto;
+   background-color: #ededed;
+   display: flex;
+   align-items: center;
+}
+
+.information-about-cep svg{
+    width: 190px;
+}
+
+.information-about-cep svg img{
+    width: 150px;
+}
+
+.information-about-cep .information-address,
+.code-ibge{
+    background: #fafafa;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+.information-about-cep .information-address{
+    flex-direction: column;
+    padding-left: 25px;
+}
+
+.information-about-cep .information-address p{
+    line-height: 1.3;
+}
+
+.information-about-cep .code-ibge{
+    flex-direction: column;
+    padding-right: 50px;
+}
+
+.information-about-cep .code-ibge .code{
+    height: 65px;
+    border: 5px solid #b3b3b3;
+    background-color: #e4e4e4;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 15px;
+    color: #057393;
+    font-size: 37px;
+    letter-spacing: 25px;
+    padding-left: 30px;
+}
+
+footer{
+    background: #282828;
+    color: #fff;
+    text-align:center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1400px){
+    .container{
+        max-width: 90%;
+        width: 90%;
+    }
+
+    .type-your-cep form,.information-about-cep div{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 959px){
+    body, html{
+        overflow-x: hidden;
+    }
+    .container{
+        max-width: 100%;
+        width: 100%;
+    }
+
+    header{
+        text-align: center;
+    }
+
+    .type-your-cep{
+        height: auto;
+    }
+    
+    .type-your-cep h2{
+        margin: 0 auto;
+        width: 90%;
+        font-size: 30px;
+    }
+
+    .type-your-cep form{
+        width: 90%;
+    }
+
+    .type-your-cep form input, .type-your-cep form button{
+        height: 50px;
+    }
+
+    .type-your-cep form input{
+        width: 80%;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+
+    .type-your-cep form button{
+        width: 20%;
+    }
+
+    .type-your-cep form button:before{
+        width: 25px;
+        height: 25px;
+    }
+
+    .type-your-cep p a{
+        font-size: 20px;
+    }
+
+    .type-your-cep p a:after{
+        width: 20px;
+        height: 20px;
+        margin: 20px auto 60px;
+    }
+
+    .information-about-cep{
+        padding-bottom: 60px;
+    }
+
+    .information-about-cep div{
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .information-about-cep .img{
+        justify-content: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .information-about-cep .information-address{
+        font-size: 20px;
+        width: 100%;
+        padding: 15px 15px;
+    }
+
+    .information-about-cep .code-ibge{
+        width: 100%;
+        padding: 0 15px 15px;
+    }
+
+    .information-about-cep .code-ibge .code{
+        letter-spacing: 10px;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+
+    footer{
+        font-size: 17px;
+    }
+}

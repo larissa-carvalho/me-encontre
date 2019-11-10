@@ -6,7 +6,7 @@ $(window).on('load', function(){
     $('input[name="cep"]').mask('00000-000');
     scrollDelay();
 
-    $('#consulta-cep button').on('click', function(event){
+    $('#form-cep button').on('click', function(event){
         event.preventDefault(); 
         getInformationAddress();
     })
